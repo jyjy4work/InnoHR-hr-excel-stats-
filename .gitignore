@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Debug / temp files
+debug_out.txt
+*.tmp
+
+# Secrets & environment
+.env
+.env.*
+*.env
+secrets.json
+credentials.json
+
+# HR data files — NEVER commit real employee data
+*.xlsx
+*.xls
+*.csv
+sample_data/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code & bkit internal files (tool state, audit logs, snapshots)
+.claude/
+.bkit/
+
+# Generated reports (optional — remove these lines if you WANT to commit reports)
+hr_report_*.html
+hr_report_*.pdf
+hr_report_*.png
