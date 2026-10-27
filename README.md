@@ -3,6 +3,14 @@
 A multilingual HR analytics dashboard built with Python & Streamlit.  
 Upload your employee Excel or CSV file and get instant interactive charts, KPIs, and exportable reports — no database or server required.
 
+## What · Why · Result
+
+| | |
+|---|---|
+| **What** | A local Streamlit dashboard (13 tabs, KO / EN / FR) that turns an HR Excel export into headcount, turnover, tenure and diversity reports. |
+| **Why** | Monthly HR statistics were rebuilt by hand in Excel each month. |
+| **Result** | Adopted by the team for monthly reporting: preparation time went from **~10 minutes to ~10 seconds**. |
+
 ---
 
 ## Features
@@ -18,7 +26,7 @@ Upload your employee Excel or CSV file and get instant interactive charts, KPIs,
 | Dept Analysis | Dept-level deep dive with stacked gender bar |
 | Forecast | 6-month headcount forecast (linear trend) |
 | Cohort | Retention heatmap + survival curves by hire year |
-| Risk | Attrition risk scoring per employee (low/medium/high) |
+| Risk | Rule-based retention-risk indicator (low / medium / high), criteria shown in the app |
 | Search | Employee-level search & filter |
 | Report | Custom report builder — choose sections, export HTML/PDF |
 | Additional | Org structure stats, tenure & age distributions |
