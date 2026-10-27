@@ -484,10 +484,10 @@ def attrition_risk_scores(df: pd.DataFrame) -> pd.DataFrame:
     재직자별 이직 위험 점수(0~100) 및 등급을 계산.
 
     점수 구성 (합계 100점 만점):
-      - 근속연수 요소 (40점): 1년 미만=40, 1~3년=25, 3~5년=12, 5년+=0
-      - 부서 이직률 요소 (40점): 해당 부서 이직률 × 0.6 (최대 40점)
-      - 연령 요소 (20점): 20대=20, 30대=12, 40대=5, 50대+=0
-        (연령 정보 없으면 0점)
+      - 근속연수 요소 (50점): 1년 미만=50, 1~3년=31, 3~5년=15, 5년+=0
+      - 부서 이직률 요소 (50점): 해당 부서 이직률 × 0.75 (최대 50점)
+
+    나이·성별 등 차별 금지 사유(프랑스 노동법 L1132-1)는 점수에 사용하지 않는다.
 
     등급:
       - High   : ≥ 60
@@ -517,28 +517,17 @@ def attrition_risk_scores(df: pd.DataFrame) -> pd.DataFrame:
         if pd.notna(row.get("tenure_years")):
             t = row["tenure_years"]
             if t < 1:
-                score += 40
+                score += 50
             elif t < 3:
-                score += 25
+                score += 31
             elif t < 5:
-                score += 12
+                score += 15
             # 5년 이상 = 0
 
         # 부서 이직률 요소
         dept = row.get("department")
         if dept and dept in dept_rates:
-            score += min(dept_rates[dept] * 0.6, 40)
-
-        # 연령 요소
-        if pd.notna(row.get("age")):
-            age = row["age"]
-            if age < 30:
-                score += 20
-            elif age < 40:
-                score += 12
-            elif age < 50:
-                score += 5
-            # 50대 이상 = 0
+            score += min(dept_rates[dept] * 0.75, 50)
 
         return min(round(score, 1), 100.0)
 

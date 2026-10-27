@@ -1632,7 +1632,6 @@ def _render_risk(df: pd.DataFrame, lang: str):
         "department":   t("col_dept", lang),
         "position":     t("col_position", lang),
         "tenure_years": t("col_tenure", lang),
-        "age":          t("col_age", lang),
         "risk_score":   t("col_risk_score", lang),
         "risk_level":   t("col_risk_level", lang),
     }

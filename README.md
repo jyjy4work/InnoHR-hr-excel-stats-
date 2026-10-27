@@ -26,7 +26,7 @@ Upload your employee Excel or CSV file and get instant interactive charts, KPIs,
 | Dept Analysis | Dept-level deep dive with stacked gender bar |
 | Forecast | 6-month headcount forecast (linear trend) |
 | Cohort | Retention heatmap + survival curves by hire year |
-| Risk | Rule-based retention-risk indicator (low / medium / high), criteria shown in the app |
+| Risk | Rule-based retention-risk indicator (low / medium / high) using tenure and department turnover only — age and gender are not used |
 | Search | Employee-level search & filter |
 | Report | Custom report builder — choose sections, export HTML/PDF |
 | Additional | Org structure stats, tenure & age distributions |
